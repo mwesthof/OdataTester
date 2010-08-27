@@ -10,12 +10,11 @@ def test_service(uri)
 	svc = OData::Service.new uri
 	data = {}
 	svc.collections.each do |collection|
-		puts "Checking #{collection}"
-		if svc.respond_to? collection and collection != "Titles"
-			query = svc.__send__ collection
-			query.top(1)
-			result = svc.execute
+		print "Checking #{collection}... "
+		if svc.respond_to? collection
+			query = svc.__send__(collection).top(1)
 			data[collection] = svc.execute.to_json
+			puts "succeded!"
 		end
 	end
 	data
