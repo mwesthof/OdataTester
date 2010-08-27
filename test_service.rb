@@ -20,4 +20,4 @@ def test_service(uri)
 	data
 end
 
-puts test_service "http://localhost/waam/api/v1.svc"
+puts test_service("http://localhost/waam/api/v1.svc")
