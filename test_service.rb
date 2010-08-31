@@ -20,4 +20,6 @@ def test_service(uri)
 	data
 end
 
-puts test_service("http://localhost/waam/api/v1.svc")
+ARGV.each do |uri|
+	puts test_service(uri)
+end
