@@ -2,7 +2,7 @@ require "ruby_odata"
 
 class OData::Service
 	def collections
-		@collections
+return 		@collections
 	end
 end
 
