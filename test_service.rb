@@ -24,4 +24,4 @@ ARGV.each do |uri|
 	puts test_service(uri)
 end
 
-puts "tacos!"
+puts "tac1s!"
